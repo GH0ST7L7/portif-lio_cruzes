@@ -96,4 +96,40 @@
 
     <!-- HISTÓRIA / LINHA DO TEMPO -->
     <section class="section container" id="historia">
-      <
+      
+      <!-- CONTATO -->
+<section class="section alt" id="contato">
+  <div class="container grid-2">
+    <div>
+      <h2>Vamos conversar</h2>
+      <p>Quer marcar um amistoso, patrocinar ou enviar fotos para a galeria?</p>
+      <ul class="contact-list">
+        <li><a href="https://wa.me/5515997130847" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="mailto:mauricio.cruz0295@outlook.com">Contato</a></li>
+      </ul>
+    </div>
+    <form class="card form" name="contato" data-netlify="true" method="POST">
+      <input type="hidden" name="form-name" value="contato">
+      <label>Nome 
+        <input name="nome" required placeholder="OFF">
+      </label>
+      <label>E-mail 
+        <input type="email" name="email" required placeholder="OFF">
+      </label>
+      <label>Mensagem 
+        <textarea name="mensagem" rows="4" placeholder="OFF"></textarea>
+      </label>
+      <button class="btn primary" type="submit">OFF</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="ano"></span> Futebol & Gole — Ribeirão dos Cruzes. Feito com ❤️ e bola na rede! — Por Maurício Cruz - Projeto Alura</p>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Voltar para o topo">↑</button>
+<script src="script.js"></script>
+
