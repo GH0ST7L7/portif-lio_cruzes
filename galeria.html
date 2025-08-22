@@ -1,0 +1,166 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria - Futebol & Gole Ribeirão dos Cruzes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: rgb(6, 5, 114);
+      color: #ffffff;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0241be, #060572);
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 5px solid #ffffff; /* Azul escuro */
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    header .logo img {
+      height: 60px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    header .logo img:hover {
+      transform: scale(1.05);
+    }
+
+    header h1 {
+      margin: 0 auto;
+      font-size: 1.8rem;
+      color: white;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 30px;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 4px solid #060572; /* Azul escuro */
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 6px 16px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #003399;
+      color: white;
+      border-top: 5px solid #001a66; /* Azul escuro */
+      margin-top: 20px;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      border: 4px solid #001a66;
+      box-shadow: 0px 6px 20px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/cruzes1.png" alt="Escudo Ribeirão dos Cruzes">
+      </a>
+    </div>
+    <h1>Galeria de Fotos</h1>
+  </header>
+
+  <main class="galeria">
+    <!-- Fotos de cruzes1 até cruzes25 -->
+    <img src="assets/images/cruzes1.png" alt="Foto 1">
+    <img src="assets/images/cruzes2.jpg" alt="Foto 2">
+    <img src="assets/images/cruzes3.jpg" alt="Foto 3">
+    <img src="assets/images/cruzes4.jpg" alt="Foto 4">
+    <img src="assets/images/cruzes5.jpg" alt="Foto 5">
+    <img src="assets/images/cruzes6.jpg" alt="Foto 6">
+    <img src="assets/images/cruzes7.jpg" alt="Foto 7">
+    <img src="assets/images/cruzes8.jpg" alt="Foto 8">
+    <img src="assets/images/cruzes9.jpg" alt="Foto 9">
+    <img src="assets/images/cruzes10.jpg" alt="Foto 10">
+    <img src="assets/images/cruzes11.jpg" alt="Foto 11">
+    <img src="assets/images/cruzes12.jpg" alt="Foto 12">
+    <img src="assets/images/cruzes13.jpg" alt="Foto 13">
+    <img src="assets/images/cruzes14.jpg" alt="Foto 14">
+    <img src="assets/images/cruzes15.jpg" alt="Foto 15">
+    <img src="assets/images/cruzes16.jpg" alt="Foto 16">
+    <img src="assets/images/cruzes17.jpg" alt="Foto 17">
+    <img src="assets/images/cruzes18.jpg" alt="Foto 18">
+    <img src="assets/images/cruzes19.jpg" alt="Foto 19">
+    <img src="assets/images/cruzes20.jpg" alt="Foto 20">
+    <img src="assets/images/VAZIO.png" alt="Foto 21">
+    <img src="assets/images/VAZIO.png" alt="Foto 22">
+    <img src="assets/images/VAZIO.png" alt="Foto 23">
+    <img src="assets/images/VAZIO.png" alt="Foto 24">
+    <img src="assets/images/VAZIO.png" alt="Foto 25">
+  </main>
+
+  <footer>
+    <p>© 2025 Futebol & Gole - Ribeirão dos Cruzes</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <img id="lightbox-img" src="" alt="Imagem Ampliada">
+  </div>
+
+  <script>
+    const imagens = document.querySelectorAll('.galeria img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    imagens.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
