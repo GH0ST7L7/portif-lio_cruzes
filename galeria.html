@@ -6,10 +6,10 @@
   <title>Galeria - Futebol & Gole Ribeirão dos Cruzes</title>
   <style>
     :root{
-      --bg:#0a0f1a;
+      --bg:#0a0f1a;       /* fundo escuro */
       --surface:#0f1f3a;
-      --brand:#0b3b8e;
-      --brand-2:#ffd23f;
+      --brand:#0b3b8e;    /* azul */
+      --brand-2:#ffd23f;  /* amarelo */
       --text:#e8edf7;
       --muted:#9fb0cb;
       --radius:18px;
@@ -20,24 +20,18 @@
     body {
       font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--text);
-      background: linear-gradient(180deg, #041027, #071a3c 40%, #09142a);
+      background: linear-gradient(180deg, var(--bg), #071a3c 40%, #09142a);
       line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(90deg, #0b3b8e, #07275e);
+      background: linear-gradient(90deg, var(--brand), #07275e);
       padding: 15px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-bottom: 5px solid var(--brand-2);
       border-radius: var(--radius);
-    }
-
-    header .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
     }
 
     header .logo img {
@@ -101,14 +95,25 @@
       background: rgba(0,0,0,0.85);
       justify-content: center;
       align-items: center;
+      flex-direction: row-reverse;
+      gap: 20px;
+      padding: 20px;
     }
 
     .lightbox img {
-      max-width: 90%;
+      max-width: 70%;
       max-height: 90%;
       border-radius: var(--radius);
       border: 4px solid var(--brand);
       box-shadow: var(--shadow);
+    }
+
+    .lightbox p {
+      flex: 1;
+      color: var(--brand-2);
+      font-size: 18px;
+      text-align: left;
+      line-height: 1.4;
     }
   </style>
 </head>
@@ -123,32 +128,33 @@
   </header>
 
   <main class="galeria">
-    <!-- Fotos de cruzes1 até cruzes25 -->
-    <img src="assets/images/cruzes1.png" alt="Foto 1">
-    <img src="assets/images/cruzes2.jpg" alt="Foto 2">
-    <img src="assets/images/cruzes3.jpg" alt="Foto 3">
-    <img src="assets/images/cruzes4.jpg" alt="Foto 4">
-    <img src="assets/images/cruzes5.jpg" alt="Foto 5">
-    <img src="assets/images/cruzes6.jpg" alt="Foto 6">
-    <img src="assets/images/cruzes7.jpg" alt="Foto 7">
-    <img src="assets/images/cruzes8.jpg" alt="Foto 8">
-    <img src="assets/images/cruzes9.jpg" alt="Foto 9">
-    <img src="assets/images/cruzes10.jpg" alt="Foto 10">
-    <img src="assets/images/cruzes11.jpg" alt="Foto 11">
-    <img src="assets/images/cruzes12.jpg" alt="Foto 12">
-    <img src="assets/images/cruzes13.jpg" alt="Foto 13">
-    <img src="assets/images/cruzes14.jpg" alt="Foto 14">
-    <img src="assets/images/cruzes15.jpg" alt="Foto 15">
-    <img src="assets/images/cruzes16.jpg" alt="Foto 16">
-    <img src="assets/images/cruzes17.jpg" alt="Foto 17">
-    <img src="assets/images/cruzes18.jpg" alt="Foto 18">
-    <img src="assets/images/cruzes19.jpg" alt="Foto 19">
-    <img src="assets/images/cruzes20.jpg" alt="Foto 20">
-    <img src="assets/images/VAZIO.png" alt="Foto 21">
-    <img src="assets/images/VAZIO.png" alt="Foto 22">
-    <img src="assets/images/VAZIO.png" alt="Foto 23">
-    <img src="assets/images/VAZIO.png" alt="Foto 24">
-    <img src="assets/images/VAZIO.png" alt="Foto 25">
+    <img src="assets/images/brasão2.jpg" alt="F.G Ribeirão dos Cruzes
+    — #oscruiztudavida">
+    <img src="assets/images/brasão.png" alt="Escudo oficial do clube Ribeirão dos Cruzes!">
+    <img src="assets/images/cruzes2.jpg" alt="Foto com a torcida.">
+    <img src="assets/images/cruzes3.jpg" alt="3">
+    <img src="assets/images/cruzes4.jpg" alt="4">
+    <img src="assets/images/cruzes5.jpg" alt="5">
+    <img src="assets/images/cruzes6.jpg" alt="6">
+    <img src="assets/images/cruzes7.jpg" alt="7">
+    <img src="assets/images/cruzes8.jpg" alt="8">
+    <img src="assets/images/cruzes9.jpg" alt="9">
+    <img src="assets/images/cruzes10.jpg" alt="10">
+    <img src="assets/images/cruzes11.jpg" alt="11">
+    <img src="assets/images/cruzes12.jpg" alt="12">
+    <img src="assets/images/cruzes13.jpg" alt="13">
+    <img src="assets/images/cruzes14.jpg" alt="14">
+    <img src="assets/images/cruzes15.jpg" alt="15">
+    <img src="assets/images/cruzes16.jpg" alt="16">
+    <img src="assets/images/cruzes17.jpg" alt="17">
+    <img src="assets/images/cruzes18.jpg" alt="18">
+    <img src="assets/images/cruzes19.jpg" alt="19">
+    <img src="assets/images/cruzes20.jpg" alt="20">
+    <img src="assets/images/VAZIO.png" alt="Espaço reservado para futuras fotos 21">
+    <img src="assets/images/VAZIO.png" alt="Espaço reservado para futuras fotos 22">
+    <img src="assets/images/VAZIO.png" alt="Espaço reservado para futuras fotos 23">
+    <img src="assets/images/VAZIO.png" alt="Espaço reservado para futuras fotos 24">
+    <img src="assets/images/VAZIO.png" alt="Espaço reservado para futuras fotos 25">
   </main>
 
   <footer>
@@ -157,17 +163,20 @@
 
   <div class="lightbox" id="lightbox">
     <img id="lightbox-img" src="" alt="Imagem Ampliada">
+    <p id="lightbox-caption"></p>
   </div>
 
   <script>
     const imagens = document.querySelectorAll('.galeria img');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
 
     imagens.forEach(img => {
       img.addEventListener('click', () => {
         lightbox.style.display = 'flex';
         lightboxImg.src = img.src;
+        lightboxCaption.textContent = img.alt;
       });
     });
 
