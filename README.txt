@@ -4,11 +4,6 @@ Como trocar rapidamente as fotos
 --------------------------------
 1) Abra a pasta `assets/images`.
 2) Substitua os arquivos mantendo os nomes:
-   cruzes1.png (usado no topo/hero e também como logo)
-   cruzes2.jpg
-   cruzes3.jpg
-   ...
-   cruzes12.jpg
 3) Use o mesmo formato da extensão (PNG ou JPG).
 
 Cores principais (em styles.css)
